@@ -19,12 +19,12 @@ const CardKeranjang = ({ keranjang, keranjangUtama, id, dispatch }) => {
   }
   return (
     <View style={styles.container}>
-      <Image source={{ uri: keranjang.product.gambar }} style={styles.gambar} />
+      <Image source={{ uri: keranjang.menu.gambar }} style={styles.gambar} />
 
       <View style={styles.desc}>
-        <Text style={styles.nama}>{keranjang.product.nama}</Text>
+        <Text style={styles.nama}>{keranjang.menu.nama}</Text>
         <Text style={styles.text}>
-          Rp. {numberWithCommas(keranjang.product.harga)}
+          Rp. {numberWithCommas(keranjang.menu.harga)}
         </Text>
 
         <Jarak height={responsiveHeight(14)} />
