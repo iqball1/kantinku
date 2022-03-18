@@ -64,7 +64,7 @@ export const masukKeranjang = data => {
 export const masukKeranjangDetail = data => {
   return dispatch => {
     const pesanans = {
-      product: data.Menu,
+      menu: data.Menu,
       jumlahPesan: data.jumlah,
       totalHarga: parseInt(data.jumlah) * parseInt(data.Menu.harga),
       catatan: data.catatan,
@@ -78,7 +78,7 @@ export const masukKeranjangDetail = data => {
       })
       .catch(error => {
         dispatchError(dispatch, MASUK_KERANJANG, error);
-        alert(error);
+        alert(error); 
       });
   };
 };
